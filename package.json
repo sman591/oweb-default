@@ -1,0 +1,23 @@
+{
+  "name": "oweb-default",
+  "version": "0.0.1",
+  "description": "Template for default oWeb Hosting pages",
+  "main": "index.html",
+  "dependencies": {
+    "grunt": "^0.4.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sman591/oweb-default"
+  },
+  "author": "Stuart Olivera",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sman591/oweb-default/issues"
+  },
+  "homepage": "https://github.com/sman591/oweb-default"
+}
