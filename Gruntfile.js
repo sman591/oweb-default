@@ -11,8 +11,6 @@ module.exports = function(grunt) {
 
   // Project configuration.
   grunt.initConfig({
-    site: grunt.file.readYAML('_config.yml'),
-
     haml: {
       dist: {
         files: {
@@ -28,7 +26,7 @@ module.exports = function(grunt) {
     // Before generating any new files,
     // remove any previously-created files.
     clean: {
-      example: ['<%= site.destination %>/*.html']
+      example: ['dist/*.html']
     },
 
     watch: {
