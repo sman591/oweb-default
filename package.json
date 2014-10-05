@@ -1,0 +1,37 @@
+{
+  "name": "oweb-default",
+  "description": "Default template for oWeb Hosting domains",
+  "version": "0.1.0",
+  "homepage": "https://github.com/sman591/oweb-default/",
+  "author": {
+    "name": "Stuart Olivera",
+    "url": "https://stuartolivera.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sman591/oweb-default.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sman591/oweb-default/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/sman591/oweb-default//blob/master/LICENSE-MIT"
+    }
+  ],
+  "main": "Grunt.js",
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "devDependencies": {
+    "assemble": "~0.4.2",
+    "grunt-contrib-clean": "~0.4.1",
+    "grunt-contrib-jshint": "~0.6.0",
+    "grunt-contrib-watch": "~0.5.1",
+    "grunt": "~0.4.5"
+  },
+  "keywords": [
+    "assemble"
+  ]
+}
