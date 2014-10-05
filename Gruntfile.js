@@ -10,6 +10,17 @@
 module.exports = function(grunt) {
 
   grunt.initConfig({
+    compass: {
+      dist: {
+        options: {
+          bundleExec: true,
+          sassDir: 'src',
+          cssDir: 'dist',
+          environment: 'production'
+        }
+      }
+    },
+
     haml: {
       dist: {
         files: {
@@ -29,9 +40,10 @@ module.exports = function(grunt) {
   });
 
   grunt.loadNpmTasks('grunt-contrib-clean');
+  grunt.loadNpmTasks('grunt-contrib-compass');
   grunt.loadNpmTasks('grunt-contrib-haml');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('assemble');
 
-  grunt.registerTask('default', ['clean', 'haml', 'assemble']);
+  grunt.registerTask('default', ['clean', 'compass', 'haml', 'assemble']);
 };

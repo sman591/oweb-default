@@ -1,0 +1,69 @@
+@import "compass/css3/"
+
+$bgcolor: #171c1f
+$fgcolor: #51a5cf
+$txtcolor: #787d7f
+$width-mobile: 500px
+$width-max: 1200px
+
+@mixin vertical-align($amount)
+  position: relative
+  top: $amount
+  @include translate(0, -1 * $amount)
+
+body
+  background: $bgcolor
+  color: $fgcolor
+  font-size: 12pt
+  font-family: "Chaparral Pro", serif
+  @media(max-width: 767px)
+    font-size: 9pt
+
+h1
+  font-size: 6.5em
+  color: $bgcolor
+  font-family: Corbel, sans-serif
+  font-weight: 700
+  -webkit-text-stroke: 3px $fgcolor
+  @include vertical-align(45%)
+
+h2
+  @include vertical-align(56%)
+  text-align: right
+  font-style: italic
+  font-size: 4em
+  right: 0
+
+a
+  color: $fgcolor
+  text-decoration: none
+
+main
+  height: 100%
+  width: 80%
+  position: fixed
+  padding: 0 0
+  left: 10%
+
+footer
+  color: $txtcolor
+  text-align: center
+  bottom: 0
+  position: absolute
+  width: 100%
+  line-height: 1.3em
+  padding: 1em 1em
+  box-sizing: border-box
+
+#bgalt
+  background: $fgcolor
+  height: 48%
+  width: 100%
+  top: 0
+  left: 0
+  position: fixed
+  z-index: -1
+
+@media (max-with: $width-mobile)
+  h1
+    display: none
