@@ -29,10 +29,6 @@ module.exports = function(grunt) {
       }
     },
 
-    assemble: {
-      options: {flatten: true}
-    },
-
     clean: ['dist/*.html', 'dist/*.css'],
 
     watch: {
@@ -43,7 +39,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-compass');
   grunt.loadNpmTasks('grunt-contrib-haml');
   grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.loadNpmTasks('assemble');
 
-  grunt.registerTask('default', ['clean', 'compass', 'haml', 'assemble']);
+  grunt.registerTask('default', ['clean', 'compass', 'haml']);
 };
