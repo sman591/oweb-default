@@ -40,6 +40,13 @@ module.exports = function(grunt) {
         files: 'src/*.haml',
         tasks: ['haml']
       },
+    },
+
+    'gh-pages': {
+      options: {
+        base: 'dist'
+      },
+      src: ['**']
     }
   });
 
@@ -47,6 +54,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-compass');
   grunt.loadNpmTasks('grunt-contrib-haml');
   grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-gh-pages');
 
   grunt.registerTask('build', ['clean', 'compass', 'haml']);
 

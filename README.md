@@ -2,6 +2,7 @@
 
 > Default template for oWeb Hosting domains
 
+Live preview available at [http://sman591.github.io/oweb-default/](http://sman591.github.io/oweb-default/)
 
 ## Getting Started
 
@@ -14,6 +15,8 @@ The following quick start options are available:
 * Start local environment: `grunt`
 
 To only compile, run `grunt build`
+
+To publish to gh-pages, run `grunt gh-pages`
 
 ## License
 
