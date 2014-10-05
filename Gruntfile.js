@@ -20,6 +20,14 @@ module.exports = function(grunt) {
       all: ['Gruntfile.js', 'lib/*.js', 'test/*.js']
     },
 
+    haml: {
+      dist: {
+        files: {
+          'dist/index.html': 'src/index.haml',
+        }
+      }
+    },
+
     assemble: {
       options: {flatten: true}
     },
@@ -41,9 +49,10 @@ module.exports = function(grunt) {
   // Load npm plugins to provide necessary tasks.
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-jshint');
+  grunt.loadNpmTasks('grunt-contrib-haml');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('assemble');
 
   // Default to tasks to run with the "grunt" command.
-  grunt.registerTask('default', ['clean', 'jshint', 'assemble']);
+  grunt.registerTask('default', ['clean', 'jshint', 'haml', 'assemble']);
 };
