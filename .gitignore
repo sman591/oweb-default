@@ -19,7 +19,6 @@ _site
 *.out
 *.pid
 *.rej
-*.ruby-version
 *.sass-cache
 *.seed
 *.swo
