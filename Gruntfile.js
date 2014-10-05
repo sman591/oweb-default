@@ -13,13 +13,6 @@ module.exports = function(grunt) {
   grunt.initConfig({
     site: grunt.file.readYAML('_config.yml'),
 
-    jshint: {
-      options: {
-        jshintrc: '.jshintrc'
-      },
-      all: ['Gruntfile.js', 'lib/*.js', 'test/*.js']
-    },
-
     haml: {
       dist: {
         files: {
@@ -39,20 +32,15 @@ module.exports = function(grunt) {
     },
 
     watch: {
-      jshint: {
-        files: ['<%= jshint.all %>'],
-        tasks: ['jshint:lint']
-      }
     }
   });
 
   // Load npm plugins to provide necessary tasks.
   grunt.loadNpmTasks('grunt-contrib-clean');
-  grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-haml');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('assemble');
 
   // Default to tasks to run with the "grunt" command.
-  grunt.registerTask('default', ['clean', 'jshint', 'haml', 'assemble']);
+  grunt.registerTask('default', ['clean', 'haml', 'assemble']);
 };
