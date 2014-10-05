@@ -21,11 +21,7 @@ module.exports = function(grunt) {
     },
 
     assemble: {
-      options: {flatten: true},
-      docs: {
-        src: ['docs/index.hbs'],
-        dest: '<%= site.destination %>/',
-      }
+      options: {flatten: true}
     },
 
     // Before generating any new files,
