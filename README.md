@@ -13,6 +13,8 @@ The following quick start options are available:
 * Install gems: `bundle install --path vendor --local`
 * Start local environment: `grunt`
 
+To only compile, run `grunt build`
+
 ## License
 
 Copyright (c) 2014 Stuart Olivera

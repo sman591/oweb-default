@@ -32,6 +32,14 @@ module.exports = function(grunt) {
     clean: ['dist/*.html', 'dist/*.css'],
 
     watch: {
+      css: {
+        files: 'src/*.sass',
+        tasks: ['compass']
+      },
+      haml: {
+        files: 'src/*.haml',
+        tasks: ['haml']
+      },
     }
   });
 
@@ -40,5 +48,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-haml');
   grunt.loadNpmTasks('grunt-contrib-watch');
 
-  grunt.registerTask('default', ['clean', 'compass', 'haml']);
+  grunt.registerTask('build', ['clean', 'compass', 'haml']);
+
+  grunt.registerTask('default', ['build', 'watch']);
 };
