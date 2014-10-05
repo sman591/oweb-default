@@ -1,0 +1,25 @@
+!!! 5
+%html
+  %head
+    %meta{ charset: "utf-8" }
+    %meta{ name: "viewport", content: "width=device-width, initial-scale=1.0" }
+    %title default.domain
+    %link{ type: "image/x-icon", href:"/favicon.ico", rel: "icon" }
+    /= stylesheet_link_tag "//fonts.googleapis.com/css?family=Roboto+Slab:400,300,100,700|Open+Sans:400,600", media: "all"
+    /= stylesheet_link_tag "all.css", media: "all"
+
+  %body
+    %main
+      %h1 default.domain
+      %h2 oWeb Hosting
+    %footer
+      %p this is the default web page. place your content here to replace it.
+      %p
+        hosting by
+        %a{href: "http://oliveraweb.com"} olivera web
+        \- source on
+        %a{href: "http://github.com/sman591/oweb-default"} github
+    #bgalt
+
+    /= javascript_include_tag "//code.jquery.com/jquery-1.11.1.min.js"
+    /= javascript_include_tag "all.js"
